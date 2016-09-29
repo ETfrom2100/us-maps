@@ -54,7 +54,7 @@ Clean up .zip files as needed.
 
 ## Convert to GeoJSON
 
-Convert using [gdal](http://www.gdal.org/). On a Mac, you can install gdal with [homebrew](http://mxcl.github.com/homebrew/): `brew install gdal`.
+Convert using [gdal](http://www.gdal.org/). On a Mac, you can install gdal with [homebrew](http://mxcl.github.com/homebrew/): `brew install gdal`. Or `brew install gdal --with-mysql` for installing mysql drivers
 
     ogr2ogr -f "GeoJSON" hsa.json ./raw/hsa/HSA_Bdry.SHP HSA_Bdry
     ogr2ogr -f "GeoJSON" hrr.json ./raw/hrr/HRR_Bdry.SHP HRR_Bdry
