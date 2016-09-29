@@ -87,6 +87,12 @@ I wanted some of these files combined into a single TopoJSON, and simplified som
 
 A simplification threshold of `3` retained 150581 / 549117 points (27%), while a level of `1` retained 231768 / 549117 points (42%).
 
+
+## Import data from a shapefile to MySQL
+The following command was used:
+
+    ogr2ogr -F MySQL MySQL:DATABASE_NAME,user=xxxx,passowrd=xxxx,port=xxxx -nln TABLE_NAME -nlt MULTIPOLYGON -update -overwrite -lco ENGINE=MyISAM -lco MYSQL_FID=OGR_FID -lco GEOMETRY_NAME=GEOMETRY SHAPE_FILE_PATH
+
 ## Reference files
 
 The `reference` directory has lookup files to get names for each of the IDs, as well as getting parent information (e.g. which state is a HRR in).
